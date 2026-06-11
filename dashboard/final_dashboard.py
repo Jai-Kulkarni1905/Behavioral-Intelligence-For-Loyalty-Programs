@@ -353,8 +353,8 @@ CHART_LAYOUT = dict(
 # ── DATA LOADING ──────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    customers = pd.read_csv("customers_final.csv")
-    clh = pd.read_csv("clh_cleaned.csv")
+    customers = pd.read_csv("dashboard/customers_final.csv")
+    clh = pd.read_csv("dashboard/clh_cleaned.csv")
     df = customers.merge(
         clh[["Loyalty Number", "Gender", "Province", "City",
              "Loyalty Card", "Education", "Marital Status", "Enrollment Type"]],
